@@ -1,0 +1,101 @@
+transaction_id,Date,mall,city,gender,age,product category,price,quantity,discount,payment
+1,5/20/2020,VistaMall,Pasay,Male,48,Frozen Foods,149,4,0,Ewallet
+2,8/21/2024,SM,Navotas,,62,Household Items,61,3,0,Cash
+3,1/7/2023,PureGold,Caloocan,Male,,Canned Goods,192,18,0,CASH
+4,7/19/2022,Others,Paranaque,Male,26,Others,77,6,0,Ewallet
+5,1/28/2020,PureGold,Pasig,Male,39,Meat and Seafood,114,18,5%,CASH
+6,2/20/2023,VistaMall,Makati,Female,76,Personal Care,61,11,0,e-wallet
+7,12/19/2021,PureGold,Marikina,Female,87,Bakery,33,6,0,CARD-debit
+8,10/16/2020,SM,Malabon,,49,Personal Care,120,17,0,Ewallet
+9,4/11/2021,SM,Mandaluyong,Female,32,Meat and Seafood,103,8,200%,Cash
+10,5/2/2021,Robinsons,Mandaluyong,Female,18,Others,18,18,0,CASH
+11,3/13/2024,VistaMall,Caloocan,Male,,Snacks,156,6,0,Ewallet
+12,9/22/2024,SM,San Juan,Female,,Others,175,13,200%,Credit Card
+13,2/20/2020,VistaMall,Las Pinas,Male,55,Snacks,107,2,0,cash
+14,6/12/2023,Robinsons,Quezon City,Male,52,Bakery,59,16,20%,DEBIT CARD
+15,7/12/2020,SM,Muntinlupa,Female,38,Bakery,27,9,0,Cash
+16,2/8/2023,VistaMall,Makati,Male,43,Meat and Seafood,101,14,0,Cash
+17,9/17/2020,WalterMart,Muntinlupa,Male,46,Fresh Produce,100,12,0,Debit Card
+18,8/23/2022,WalterMart,Manila,Male,39,Others,26,15,0,Debit Card
+19,6/23/2023,SM,Makati,Female,64,Frozen Foods,51,6,20%,CARD-credit
+20,1/6/2020,Others,Pasig,Female,18,Bakery,190,4,0,CARD-debit
+21,7/24/2024,Others,Marikina,,75,Others,133,2,0,cash
+22,10/5/2020,SM,Valenzuela,Female,,Dairy Products,104,12,0,Ewallet
+23,2/24/2022,VistaMall,Makati,Female,76,Snacks,190,14,0,DEBIT CARD
+24,10/18/2024,Others,Quezon City,Male,58,Dairy Products,50,1,0,e-wallet
+25,2/13/2023,SM,Taguig,,15,Bakery,190,18,0,E-wallet
+26,11/12/2022,SM,Marikina,Male,31,Personal Care,134,14,0,Debit Card
+27,12/29/2021,SM,Makati,Male,,Snacks,81,18,0,Debit Card
+28,8/2/2021,Others,Paranaque,,35,Others,174,12,20%,CASH
+29,11/26/2023,WalterMart,Mandaluyong,Male,60,Personal Care,167,10,0,Debit Card
+30,9/4/2024,Robinsons,Pasig,,90,Bakery,131,8,0,Credit Card
+31,7/29/2023,SM,Taguig,Male,33,Canned Goods,111,7,0,credit card
+32,11/26/2021,Others,Marikina,Male,,Canned Goods,58,16,0,Debit Card
+33,3/2/2021,PureGold,Taguig,,36,Meat and Seafood,188,19,20%,Credit Card
+34,5/14/2022,PureGold,Pasig,Male,50,Beverages,180,3,0,Ewallet
+35,7/28/2024,Robinsons,Pasig,Male,71,Fresh Produce,154,12,0,CASH
+36,7/10/2020,Robinsons,Valenzuela,Male,63,Canned Goods,96,11,-12%,Debit Card
+37,3/22/2024,PureGold,Mandaluyong,Male,19,Household Items,99,7,0,credit card
+38,5/24/2022,SM,Mandaluyong,,88,Beverages,56,2,0,Credit Card
+39,8/19/2022,LandMark,Muntinlupa,,49,Household Items,196,17,5%,E-wallet
+40,11/28/2023,VistaMall,Muntinlupa,,47,Meat and Seafood,139,10,0,e-wallet
+41,11/19/2020,Robinsons,Caloocan,Male,76,Dairy Products,80,16,0,debit card
+42,8/14/2024,PureGold,Manila,Female,66,Frozen Foods,174,16,0,Ewallet
+43,4/27/2022,LandMark,Malabon,,,Meat and Seafood,71,18,0,CARD-debit
+44,4/10/2020,SM,Paranaque,,38,Frozen Foods,154,1,0,Debit Card
+45,2/13/2020,Others,Muntinlupa,Male,68,Dairy Products,197,16,0,Ewallet
+46,8/9/2020,WalterMart,Caloocan,Male,45,Canned Goods,180,18,0,Ewallet
+47,4/19/2022,Robinsons,Taguig,Male,67,Fresh Produce,82,12,0,Cash
+48,11/1/2021,Robinsons,Mandaluyong,Female,37,Dairy Products,115,2,5%,cash
+49,5/10/2024,WalterMart,Pasay,Male,82,Bakery,164,5,0,DEBIT CARD
+50,4/9/2020,Robinsons,Las Pinas,Female,33,Personal Care,187,17,200%,Ewallet
+51,9/20/2024,SM,Taguig,Female,49,Personal Care,91,3,0,e-wallet
+52,5/24/2024,LandMark,Makati,Female,59,Snacks,188,17,0,CARD-debit
+53,1/6/2021,WalterMart,Pasay,Male,31,Canned Goods,193,11,5%,credit card
+54,6/2/2023,VistaMall,Makati,Male,,Personal Care,73,20,0,Cash
+55,2/2/2022,LandMark,Paranaque,Female,,Snacks,182,19,0,Ewallet
+56,7/13/2022,Robinsons,Taguig,Female,41,Household Items,76,2,0,debit card
+57,5/11/2022,Robinsons,Malabon,Male,,Beverages,29,6,10%,Cash
+58,6/2/2021,WalterMart,San Juan,Female,75,Others,49,3,0,CREDIT CARD
+59,1/17/2024,WalterMart,Las Pinas,Female,41,Others,37,6,5%,CASH
+60,12/14/2022,VistaMall,Muntinlupa,Male,80,Others,111,14,0,DEBIT CARD
+61,1/20/2024,LandMark,Navotas,Male,79,Canned Goods,25,6,0,CASH
+62,6/27/2020,VistaMall,Valenzuela,Female,44,Bakery,58,8,0,cash
+63,2/2/2022,SM,Taguig,Male,,Frozen Foods,196,17,0,e-wallet
+64,8/13/2020,VistaMall,Mandaluyong,Female,79,Others,192,15,0,Credit Card
+65,6/29/2023,VistaMall,Malabon,Male,21,Canned Goods,59,18,0,E-wallet
+66,8/16/2020,Others,Mandaluyong,Male,15,Household Items,75,12,0,credit card
+67,7/19/2023,PureGold,Las Pinas,Female,31,Fresh Produce,30,4,0,CARD-credit
+68,10/2/2023,PureGold,Quezon City,,77,Personal Care,49,8,0,Debit Card
+69,5/11/2023,Robinsons,Valenzuela,,63,Others,41,11,0,Cash
+70,1/11/2022,PureGold,Paranaque,Female,90,Others,37,4,0,E-wallet
+71,1/26/2022,LandMark,San Juan,,,Canned Goods,94,2,0,e-wallet
+72,1/13/2020,Others,Malabon,,59,Others,79,17,0,CASH
+73,1/27/2020,VistaMall,Pasig,Female,31,Snacks,89,12,0,DEBIT CARD
+74,2/28/2023,VistaMall,Makati,,40,Snacks,195,3,0,coins
+75,7/1/2024,PureGold,Caloocan,Female,75,Snacks,175,19,0,coins
+76,7/17/2020,LandMark,San Juan,Female,86,Frozen Foods,153,19,0,E-wallet
+77,11/2/2021,PureGold,Marikina,,28,Beverages,61,8,0,e-wallet
+78,3/27/2023,PureGold,Quezon City,Female,28,Beverages,171,7,5%,CREDIT CARD
+79,1/22/2024,SM,Manila,Male,59,Frozen Foods,18,14,0,Credit Card
+80,11/4/2020,VistaMall,Taguig,Female,61,Fresh Produce,189,16,0,coins
+81,10/31/2023,PureGold,Valenzuela,Female,25,Dairy Products,19,13,0,debit card
+82,9/23/2023,Robinsons,Paranaque,Female,54,Snacks,30,12,0,Cash
+83,11/16/2021,Robinsons,Caloocan,Male,90,Frozen Foods,159,14,0,Cash
+84,3/2/2021,LandMark,Pasig,Male,62,Others,92,13,20%,Credit Card
+85,6/22/2020,SM,Valenzuela,Male,82,Others,79,12,0,coins
+86,10/19/2022,VistaMall,Mandaluyong,,15,Others,200,11,0,credit card
+87,12/14/2023,Robinsons,Navotas,Male,20,Others,35,8,0,Cash
+88,11/23/2021,SM,San Juan,Female,87,Dairy Products,172,20,0,cash
+89,11/1/2022,Robinsons,Pasig,,28,Frozen Foods,152,10,5%,Debit Card
+90,7/9/2023,WalterMart,Marikina,Female,82,Bakery,101,17,0,CASH
+91,5/11/2022,Robinsons,Marikina,Male,,Others,144,14,0,CASH
+92,8/1/2020,VistaMall,Caloocan,,26,Canned Goods,170,7,0,Credit Card
+93,7/21/2023,Others,Paranaque,Female,63,Bakery,139,10,0,credit card
+94,10/26/2024,Robinsons,Pasay,Male,,Beverages,27,20,5%,Debit Card
+95,9/23/2022,Others,Mandaluyong,Male,16,Frozen Foods,117,18,0,CARD-debit
+96,2/25/2022,SM,Navotas,Male,85,Frozen Foods,50,6,0,Cash
+97,4/20/2022,LandMark,San Juan,Male,,Canned Goods,114,17,20%,Credit Card
+98,5/2/2021,WalterMart,Manila,Female,,Personal Care,111,12,0,Debit Card
+99,8/11/2024,WalterMart,Pasig,,,Fresh Produce,60,10,0,Credit Card
+100,2/28/2022,Others,Manila,Male,24,Snacks,177,6,0,DEBIT CARD

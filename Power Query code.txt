@@ -1,0 +1,60 @@
+// Main table
+let
+    Source = Excel.CurrentWorkbook(){[Name="Table2"]}[Content],
+    #"Changed Type" = Table.TransformColumnTypes(Source,{{"transaction_id", Int64.Type}, {"Date", type datetime}, {"mall", type text}, {"city", type text}, {"gender", type text}, {"age", Int64.Type}, {"product category", type text}, {"price", Int64.Type}, {"quantity", Int64.Type}, {"discount", type number}, {"payment", type text}}),
+    #"Lowercased Text" = Table.TransformColumns(#"Changed Type",{{"payment", Text.Lower, type text}}),
+    #"Replaced Value" = Table.ReplaceValue(#"Lowercased Text","ewallet","e-wallet",Replacer.ReplaceText,{"payment"}),
+    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","card-debit","debit card",Replacer.ReplaceText,{"payment"}),
+    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","coins","cash",Replacer.ReplaceText,{"payment"}),
+    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","card-credit","credit card",Replacer.ReplaceText,{"payment"}),
+    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3",null,"undeclared",Replacer.ReplaceValue,{"gender"}),
+    #"Calculated Absolute Value" = Table.TransformColumns(#"Replaced Value4",{{"discount", Number.Abs, type number}}),
+    #"Replaced Value5" = Table.ReplaceValue(#"Calculated Absolute Value",2,0.2,Replacer.ReplaceValue,{"discount"}),
+    #"Replaced Value6" = Table.ReplaceValue(#"Replaced Value5",null,-1,Replacer.ReplaceValue,{"age"}),
+    #"Added Conditional Column" = Table.AddColumn(#"Replaced Value6", "discount_clean", each if [age] = -1 then [discount] else if [age] < 21 then 0.2 else if [age] >= 60 then 0.2 else [discount]),
+    #"Changed Type1" = Table.TransformColumnTypes(#"Added Conditional Column",{{"discount_clean", Percentage.Type}}),
+    #"Removed Columns" = Table.RemoveColumns(#"Changed Type1",{"discount"}),
+    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"discount_clean", "discount"}}),
+    #"Replaced Value7" = Table.ReplaceValue(#"Renamed Columns",-1,null,Replacer.ReplaceValue,{"age"}),
+    #"Added Custom" = Table.AddColumn(#"Replaced Value7", "age_clean", each if [age] = null then avgAge_fucntion( [mall], [gender] ) else [age]),
+    #"Removed Columns1" = Table.RemoveColumns(#"Added Custom",{"age"}),
+    #"Renamed Columns1" = Table.RenameColumns(#"Removed Columns1",{{"age_clean", "age"}}),
+    #"Changed Type2" = Table.TransformColumnTypes(#"Renamed Columns1",{{"age", Int64.Type}})
+in
+    #"Changed Type2"
+
+// Ave Age
+let
+    Source = Excel.CurrentWorkbook(){[Name="Table2"]}[Content],
+    #"Changed Type" = Table.TransformColumnTypes(Source,{{"transaction_id", Int64.Type}, {"Date", type datetime}, {"mall", type text}, {"city", type text}, {"gender", type text}, {"age", Int64.Type}, {"product category", type text}, {"price", Int64.Type}, {"quantity", Int64.Type}, {"discount", type number}, {"payment", type text}}),
+    #"Lowercased Text" = Table.TransformColumns(#"Changed Type",{{"payment", Text.Lower, type text}}),
+    #"Replaced Value" = Table.ReplaceValue(#"Lowercased Text","ewallet","e-wallet",Replacer.ReplaceText,{"payment"}),
+    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","card-debit","debit card",Replacer.ReplaceText,{"payment"}),
+    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","coins","cash",Replacer.ReplaceText,{"payment"}),
+    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","card-credit","credit card",Replacer.ReplaceText,{"payment"}),
+    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3",null,"undeclared",Replacer.ReplaceValue,{"gender"}),
+    #"Calculated Absolute Value" = Table.TransformColumns(#"Replaced Value4",{{"discount", Number.Abs, type number}}),
+    #"Replaced Value5" = Table.ReplaceValue(#"Calculated Absolute Value",2,0.2,Replacer.ReplaceValue,{"discount"}),
+    #"Replaced Value6" = Table.ReplaceValue(#"Replaced Value5",null,-1,Replacer.ReplaceValue,{"age"}),
+    #"Added Conditional Column" = Table.AddColumn(#"Replaced Value6", "discount_clean", each if [age] = -1 then [discount] else if [age] < 21 then 0.2 else if [age] >= 60 then 0.2 else [discount]),
+    #"Changed Type1" = Table.TransformColumnTypes(#"Added Conditional Column",{{"discount_clean", Percentage.Type}}),
+    #"Removed Columns" = Table.RemoveColumns(#"Changed Type1",{"discount"}),
+    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"discount_clean", "discount"}}),
+    #"Replaced Value7" = Table.ReplaceValue(#"Renamed Columns",-1,null,Replacer.ReplaceValue,{"age"}),
+    #"Removed Other Columns" = Table.SelectColumns(#"Replaced Value7",{"mall", "gender", "age"}),
+    #"Grouped Rows" = Table.Group(#"Removed Other Columns", {"mall", "gender"}, {{"ave_age", each List.Average([age]), type nullable number}}),
+    #"Replaced Value8" = Table.ReplaceValue(#"Grouped Rows",null,58.25,Replacer.ReplaceValue,{"ave_age"})
+in
+    #"Replaced Value8"
+
+// avgAge_fucntion
+let
+    replaceNull = ( mall as text, gender as text ) =>
+    let 
+        // function that will filter the Ave Age Table by mall and gender
+        lookUpRow = Table.SelectRows(#"Ave Age", each [mall] = mall and [gender] = gender),
+
+        // function that will get the age from the Ave Age Table
+        getAge = if Table.IsEmpty(lookUpRow) then null else lookUpRow{0}[ave_age]
+    in getAge
+in replaceNull
